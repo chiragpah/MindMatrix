@@ -1,0 +1,12 @@
+<div class="modal-header bg-dark text-white">
+  <h4 class="modal-title" id="modal-basic-title">Successfully Completed</h4>
+</div>
+<div class="modal-body bg-dark text-white">
+  <div echarts [options]="horizontalBarOption" class="bar-chart"></div>
+  <div *ngIf="resultData.pointsEarned.maxPoints!=0&&resultData.pointsEarned.points!=0" echarts [options]="gaugeOption" class="gauge"></div>
+</div>
+<div class="modal-footer bg-dark text-white">
+  <button type="button" class="btn btn-outline-light" (click)="nextPage()">
+    Next
+  </button>
+</div>
