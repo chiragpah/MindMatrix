@@ -1,0 +1,41 @@
+.card {
+    max-width: 33rem;
+    background: #fff;
+    margin: 0 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 0.5rem;
+  }
+  
+  .star {
+    font-size: 8vh;
+    cursor: pointer;
+  }
+  
+  .star::before {
+    content: "★";
+  }
+  
+  .star.unrated::before {
+    content: "☆";
+  }
+  
+  .rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .rating-container .star {
+    margin: 0 0.5rem;
+  }
+  
+  .rating-container .star.unrated {
+    color: transparent;
+  }
+  
+  .rating-container .star.rated {
+    color: gold; /* Change color to your desired color */
+  }
+  
