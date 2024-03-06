@@ -1,0 +1,16 @@
+<div class="card root cardbg shadow mx-auto mb-2" >
+  <div class="card-body p-1">
+    <div class=" mt-1 ml-2">
+      {{index+1}}.
+    </div>
+    <div class="ml-2 mt-2 data"><span class="f-16 fwt700 white">{{test.name}}</span> <br/><small class="f-13 fwt600 grey">{{test.sections}} Sections</small></div>
+    <ng-container *ngIf="type==='student'">
+      <a *ngIf="test.status=='pending'" class=" ml-auto my-auto mr-3 f-11 grey fwt700" (click)="startTest()" >Start Test</a>
+      <p *ngIf="test.status=='completed'" class=" ml-auto my-auto mr-3 f-11 grey fwt700" >Completed</p>
+    </ng-container>
+    <!-- <ng-container *ngIf="type==='instructor'">
+      <a class=" ml-auto my-auto mr-3 f-11 grey fwt700" (click)="editTest()" >Edit</a>
+    </ng-container> -->
+  </div>
+  
+</div>
