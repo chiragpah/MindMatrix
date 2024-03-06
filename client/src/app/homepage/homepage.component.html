@@ -1,0 +1,129 @@
+
+
+<div class="body">
+  
+    <div class="one">
+      <div class="two"></div>
+      <div class="three">
+        <img
+          alt=""
+          loading="lazy"
+          width="400"
+          height="400"
+          decoding="async"
+          data-nimg="1"
+          class="img_style"
+          src="../../assets/banner-img-1.png"
+          style="color: transparent"
+        />
+      </div>
+      <div class="four">
+        <h2 class="five"></h2>
+        <br />
+        <p class="six"></p>
+        <br /><br />
+        <div class="seven">
+          <input
+            placeholder="Search Courses..."
+            class="bg-transparent border dark:border-none dark:bg-[#575757] dark:placeholder:text-[#ffffffdd] rounded-[5px] p-2 w-full h-full outline-none text-[#0000004e] dark:text-[#ffffffe6] text-[20px] font-[500] font-Josefin"
+            type="search" #searchInput
+            value="" 
+          />
+   
+          <div class="eight"(click)="onsearchedClick()">
+            <svg 
+              stroke="currentColor"
+              fill="currentColor"
+              stroke-width="0"
+              viewBox="0 0 24 24"
+              class="text-white"
+              height="30"
+              width="30"
+              xmlns="http://www.w3.org/2000/svg"
+               
+            >
+              <path
+                d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <br /><br />
+        <div class="nine">
+          <img
+            alt=""
+            loading="lazy"
+            width="46"
+            height="46"
+            decoding="async"
+            data-nimg="1"
+            class="image-style "
+            src="../../assets/client-1.jpg"
+            style="color: transparent"
+          /><img
+            alt=""
+            loading="lazy"
+            width="46"
+            height="46"
+            decoding="async"
+            data-nimg="1"
+            class="image-style"
+            src="../../assets/client-2.jpg"
+            style="color: transparent"
+          /><img
+            alt=""
+            loading="lazy"
+            width="46"
+            height="46"
+            decoding="async"
+            data-nimg="1"
+            class="image-style"
+            src="../../assets/client-3.jpg"
+            style="color: transparent"
+          />
+          <p class="ten">
+            500K+ People already trusted us.
+            <a class="dark:text-[#46e256] text-[crimson]" href="/courses"
+              >View Courses</a
+            >
+          </p>
+        </div>
+        <br />
+      </div>
+    </div>
+  
+  
+  <!-- //section -->
+  <!-- <div class="">
+    <div class="width-90 width-80 margin-auto"> -->
+      <!-- <h1
+      class="text-center font-Poppins text-size-25 line-height-35 text-size-3xl text-size-4xl dark-text-white line-height-60 text-black font-weight-700 tracking-tight text-color"
+      >
+  
+        <ng-container class="text-color">Expand Your Career </ng-container> <span class="text-gradient">Opportunity</span>
+        <br />Opportunity With Our Courses
+      </h1> -->
+      <br /><br />
+      
+      <div class="overall_container">
+        <h1
+        class="card_above_txt">
+        Unlock Your Potential with <span class="text-gradient">Comprehensive</span>
+        <br /><br/>
+        <span class="text-gradient">Project-Based</span> Courses for Career
+        Growth
+        </h1>
+        <div class="grid_box">
+      <app-cards [items]="item" *ngFor="let item of course"></app-cards>
+    </div>
+    </div>
+  </div>
+  
+  <!-- <div class="toprated ">
+    <h2 class="text-gradient">Top Rated Course</h2>
+  </div> -->
+  
+  <!-- <top-rated-course [searchedText]="searchval"></top-rated-course> -->
+  
+  <!-- </div> -->
+  

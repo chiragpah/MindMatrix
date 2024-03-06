@@ -1,0 +1,101 @@
+
+<div class="form-container">
+    <form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+
+        <div class="profile-photo-section">
+            <div class="profile-photo-container">
+              <img id="profilePhotoPreview" src="../../../../../assets/images/avatar.png" alt="Profile Photo" class="profile-photo">
+              <div class="overlay">
+                <button type="button" style="background-color: pink;" id="changePhotoBtn" class="photo-btn" onclick="document.getElementById('profilePhoto').click()">
+                    <i class="fa-solid fa-camera"></i>
+                </button>
+                <button type="button" id="deletePhotoBtn" class="photo-btn" onclick="deleteProfilePhoto()">
+                  <i class="fa fa-trash"></i>
+                </button>
+              </div>
+              <input type="file" id="profilePhoto" class="file-input" onchange="previewProfilePhoto()" accept="image/*">
+            </div>
+          </div>
+
+     
+          <div class="form-row">
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Full Name</label>
+              <input type="text" formControlName="fullName" class="form-control" id="fullName">
+            </div>
+      
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" formControlName="email" class="form-control" id="email"><!--[readonly]="true"-->
+            </div>
+          </div>
+
+      <div class="form-row">
+        <!-- <div class="mb-3">
+          <label for="phoneNumber" class="form-label">Phone Number</label>
+          <input type="tel" formControlName="phoneNumber" class="form-control" id="phoneNumber">
+        </div> -->
+      
+        <!-- <div class="mb-3">
+          <label for="password" the class="form-label">Password</label>
+          <input type="password" formControlName="password" class="form-control" id="password">
+        </div> -->
+      </div>
+      
+      <button type="submit" class="btn btn-primary" >Update Profile</button>
+    </form>
+  </div>
+  
+
+
+  
+<!-- 
+<div class="w-full pl-6 800px:pl-10">
+  <form>
+    <div class="w-full 800px:flex block pb-4">
+      <div class="w-[100%] 800px:w-[50%]">
+        <label class="block pb-2">Full Name</label
+        ><input
+          class="w-full bg-transparent border rounded h-[40px] px-2 outline-none mt-[10px] font-Poppins !w-[95%] mb-4 800px:mb-0"
+          required=""
+          type="text"
+          value="abhishek wasu"
+        />
+      </div>
+      <div class="w-[100%] 800px:w-[50%]">
+        <label class="block pb-2">Email Address</label
+        ><input
+          class="w-full bg-transparent border rounded h-[40px] px-2 outline-none mt-[10px] font-Poppins !w-[95%] mb-1 800px:mb-0"
+          required=""
+          type="text"
+          value="abhishekwasu2001@gmail.com"
+        />
+      </div>
+    </div>
+    <div class="w-full 800px:flex block pb-4">
+      <div class="w-[100%] 800px:w-[50%]">
+        <label class="block pb-2">Phone Number</label
+        ><input
+          class="w-full bg-transparent border rounded h-[40px] px-2 outline-none mt-[10px] font-Poppins !w-[95%] mb-4 800px:mb-0"
+          type="number"
+        />
+      </div>
+      <div class="w-[100%] 800px:w-[50%]">
+        <label class="block pb-2">Enter your password</label
+        ><input
+          class="w-full bg-transparent border rounded h-[40px] px-2 outline-none mt-[10px] font-Poppins !w-[95%] mb-4 800px:mb-0"
+          required=""
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+    <input
+      class="w-full 800px:w-[250px] h-[40px] border border-[#37a39a] text-center text-[#fff] rounded-[3px] mt-8 cursor-pointer"
+      required=""
+      type="submit"
+      value="Update"
+    />
+  </form>
+  <br />
+</div> -->
