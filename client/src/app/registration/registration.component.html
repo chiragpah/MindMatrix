@@ -10,10 +10,9 @@
         <input id="name" class="form-control txt1_user" formControlName="name" placeholder="Enter Name" type="text"  />
         <span class="validate_msg" *ngIf="registrationform.get('name')?.errors?.['required'] && (f['name'].dirty || f['name'].touched)">First
         Name is required</span>
-      <span class="validate_msg"
-        *ngIf="registrationform.get('name')?.errors?.['invalidName']&& (f['name'].dirty || f['name'].touched)">Invalid
-        First Name</span>
-      </div>
+      <span class="validate_msg" *ngIf="registrationform.get('name')?.errors?.['invalid']&& (f['name'].dirty || f['name'].touched)">Invalid First Name</span>
+      <span class="validate_msg" *ngIf="registrationform.get('name')?.errors?.['minlength'] && (f['name'].dirty || f['name'].touched)">Name must be at least 5 characters long</span> 
+    </div>
         <label
         class="lbl1_user"
         for="email"

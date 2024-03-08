@@ -66,7 +66,7 @@ export class OtpComponent implements OnInit{
     return this.loginform.controls;
   }  
   onsubmit(){
-  
+    if(this.loginform.valid){
     console.log(this.f['digit_1'].value);    
     const d1= this.f['digit_1'].value;
     const d2= this.f['digit_2'].value;
@@ -80,13 +80,16 @@ export class OtpComponent implements OnInit{
      this.otpservice.activateUser(access_token,otp).subscribe(response=>{
       console.log(response);
       
-      
+     
       
      
     
     })
     })
-      
+  }
+  else{
+    alert("OTP TOH DAL")
+  }
    
   }
   

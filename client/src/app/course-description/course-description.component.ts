@@ -4,7 +4,7 @@ import { Course } from '../../../Interfaces/Course.interface';
 import { log } from 'console';
 import { ActivatedRoute } from '@angular/router';
 import { UserService } from '../../../services/user.service';
-import { response } from 'express';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-course-description',
   templateUrl: './course-description.component.html',
@@ -18,7 +18,7 @@ export class CourseDescriptionComponent implements OnInit {
   userData!:any;
   showPlay:boolean=false;
   showPrice:boolean=true;
- constructor(private CourseContent:CourseDescriptionService,private route: ActivatedRoute,private user:UserService ){}
+ constructor(private CourseContent:CourseDescriptionService,private route: ActivatedRoute ,private user:UserService,private router: Router ){}
  userPurchaseCheck(id:any){
     this.user.getUser().subscribe(response=>{
       
@@ -36,6 +36,9 @@ export class CourseDescriptionComponent implements OnInit {
       }
    })
  }
+ gotoCoursePlayer(){
+  this.router.navigate(['/CoursePlayer',this.ID]);
+}
  ngOnInit():void{
   this.ID = this.route.snapshot.paramMap.get('id');
   console.log('ID:', this.ID);

@@ -46,13 +46,6 @@ export class LoginComponent {
     
   }
 
-
-
-
-
-
-
-
   ngOnInit(): void {
     this.loginform = this.formBuilder.group({
      
@@ -88,18 +81,22 @@ export class LoginComponent {
     return this.loginform.controls;
   }
   onSubmit(){
-  
+ 
     this.loginService.login(this.f['email'].value,this.f['password'].value).subscribe(response=>{
       
       console.log(response.access_token,response);
        this.cookieService.set('access_token', response.accessToken);
-
-      this.cookieService.set('refresh_token', response.refreshToken);
+        console.log(response.accessToken);
+        
+      // this.cookieService.set('refresh_token', response.refreshToken);
       this.closeModal()
   
     },
     error=>{
       this.errorhandler.setError("Invalid username or password")
+      alert("Invalid Login")
+      this.loginform.reset();
+
     })
 
   }

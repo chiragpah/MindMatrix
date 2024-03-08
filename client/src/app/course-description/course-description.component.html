@@ -216,7 +216,7 @@
                 </div>
                 <div class="course_nine_three">
                   <div class="course_nine_four">
-                    <h5 class="course_nine_five">{{review}}</h5>
+                    <h5 class="course_nine_five">{{review.user.name}}</h5>
                     <div class="course_nine_six">
                       <!-- star according to rating -->
                       <svg *ngFor="let star of generateRange(review.rating)"
@@ -276,7 +276,7 @@
               </div>
               <div
                 class="course_video_eight"
-              *ngIf="showPlay">
+              *ngIf="showPlay" (click)="gotoCoursePlayer()" >
              Play Course
               </div>
             </div>

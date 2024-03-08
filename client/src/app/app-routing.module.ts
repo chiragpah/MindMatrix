@@ -10,6 +10,7 @@ import { AdminComponent } from './user-dashboard/dashboardComp/admin/admin.compo
 import { FaqComponent } from './faq/faq.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { CourseplayerComponent } from './courseplayer/courseplayer.component';
 const routes: Routes = [
   {
     path: '',
@@ -21,6 +22,7 @@ const routes: Routes = [
   },
 
   { path: 'course/:id', component: CourseDescriptionComponent },
+  { path: 'CoursePlayer/:id', component: CourseplayerComponent },
   {
     path: 'forgot-password',
     component: ForgotpasswordComponent

@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild,ElementRef } from '@angular/core';
 import { CourseplayerService } from '../../../services/courseplayer.service';
+import { ActivatedRoute } from '@angular/router';
 import videojs from 'video.js';
 import 'video.js/dist/video-js.css';
 @Component({
@@ -9,16 +10,20 @@ import 'video.js/dist/video-js.css';
 })
 export class CourseplayerComponent implements OnInit {
   course:any;
-  // @ViewChild('videoPlayer') videoPlayer:any;
-  constructor(private CourseContent:CourseplayerService,private elementRef: ElementRef){}
+  ID:any;
+ 
+  constructor(private CourseContent:CourseplayerService,private elementRef: ElementRef,private route:ActivatedRoute){}
    
   
   
   ngOnInit(): void {
-
+    this.ID = this.route.snapshot.paramMap.get('id');
+    console.log('ID:', this.ID);
     this.CourseContent.getParticularCourseData().subscribe(data=>{
       this.course=data.content;
-        console.log(this.course[0]);
+        console.log(this.course);
+       
+        
       
      })
     const player = videojs('myPlayerID');
@@ -43,16 +48,26 @@ export class CourseplayerComponent implements OnInit {
       newElementFB.id = "forwardButton";
 
       // Assign properties to elements and assign to parents
-      newImageBB.setAttribute("src", "path/to/back-button-image.png");
+      
+      newImageBB.setAttribute("src", "../../assets/fast-backward.png ");
+      newImageBB.style.paddingTop = '5px';
+      newImageBB.style.marginRight = '5px';
+
+     
+      newImageFB.setAttribute("src", "../../assets/fast-forward-button.png");
+      newImageFB.style.paddingTop = '5px';
       newElementBB.appendChild(newImageBB);
-      newImageFB.setAttribute("src", "path/to/forward-button-image.png");
       newElementFB.appendChild(newImageFB);
+      
+     
+      
 
       // Get controlbar and insert elements
       controlBar = player.$(".vjs-control-bar");
+      
       // Get the element to insert buttons in front of in conrolbar
       insertBeforeNode = player.$(".vjs-volume-panel");
-
+      
       // Insert the button div in proper location
       if (controlBar) {
         controlBar.insertBefore(newElementBB, insertBeforeNode);
