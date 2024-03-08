@@ -1,0 +1,131 @@
+
+a{
+    text-decoration: none;
+}
+span{
+    color: #fff;
+}
+.header_one{
+    width: 100%;
+    position: relative;
+    height: 80px;
+}
+.header_two{
+    width: 100%; /* w-full */
+    border-bottom-width: 1px;/* border-b dark:border-[#ffffff1c] */
+    height: 80px; /* h-[80px] */
+    border-color: #ffffff1c;
+    z-index: 80; /* z-[80] */
+    box-shadow: 0px 2px 4px rgba(255, 255, 255, 0.12); /* dark:shadow */
+}
+.header_three{
+    width: 95%; /* w-[95%] */
+  /* 800px:w-[92%] */
+  width: 92%; /* 800px:w-[92%] */
+  margin: auto; /* m-auto */
+  padding: 0.75rem; /* py-2 */
+  height: 100%; /* h-full */
+}
+.header_four{
+    width: 100%; /* w-full */
+   
+  display: flex; /* flex */
+  align-items: center; /* items-center */
+  justify-content: space-between; /* justify-between */
+  padding: 0.75rem; /* p-3 */
+}
+.header_five{
+    font-size: 25px; /* text-[25px] */
+  font-family: "Poppins", sans-serif; /* font-Poppins */
+  font-weight: 700; /* font-[500] */
+  color: white;
+  
+}
+.header_six{
+    display: flex; /* flex */
+    color: white;
+    align-items: center; /* items-center */
+   
+}
+.header_seven{
+    display: none;
+}
+.header_eight{
+   
+  font-size: 18px; /* text-[18px] */
+  padding-left: 1.5rem; /* Equivalent to Tailwind px-6 */
+  padding-right: 1.5rem; /* Equivalent to Tailwind px-6 */
+  font-family: "Poppins", sans-serif; /* font-Poppins */
+  font-weight: 400; /* font-[400] */
+}
+.header_nine{
+    font-size: 18px; /* text-[18px] */
+  padding-left: 1.5rem; /* Equivalent to Tailwind px-6 */
+  padding-right: 1.5rem; /* Equivalent to Tailwind px-6 */
+  font-family: "Poppins", sans-serif; /* font-Poppins */
+  font-weight: 400; /* font-[400] */
+  color:  #37a39a; /* text-[crimson] */
+}
+.header_ten{
+    font-size: 18px; /* text-[18px] */
+    padding-left: 1.5rem; /* Equivalent to Tailwind px-6 */
+    padding-right: 1.5rem; /* Equivalent to Tailwind px-6 */
+    font-family: "Poppins", sans-serif; /* font-Poppins */
+    font-weight: 400; /* font-[400] */
+
+}
+.header_eleven{
+    font-size: 18px; /* text-[18px] */
+  padding-left: 1.5rem; /* Equivalent to Tailwind px-6 */
+  padding-right: 1.5rem; /* Equivalent to Tailwind px-6 */
+  font-family: "Poppins", sans-serif; /* font-Poppins */
+  font-weight: 400; /* font-[400] */
+  
+}
+.header_twelve{
+    font-size: 18px; /* text-[18px] */
+  padding-left: 1.5rem; /* Equivalent to Tailwind px-6 */
+  padding-right: 1.5rem; /* Equivalent to Tailwind px-6 */
+  font-family: "Poppins", sans-serif; /* font-Poppins */
+  font-weight: 400; /* font-[400] */
+ 
+}
+.header_thirteen{
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    justify-content: center; /* justify-center */
+    margin-left: 1rem; /* Equivalent to Tailwind mx-4 */
+    margin-right: 1rem; /* Equivalent to Tailwind mx-4 */
+}
+.header_fourteen{
+    display: none;
+}
+.header_fifteen{
+    cursor: pointer; /* cursor-pointer */
+  color: #fff; 
+  display: none;
+}
+.header_sixteen{
+    cursor: pointer; /* cursor-pointer */
+    color: #fff;
+    display: none;
+}
+
+@media (min-width: 800px) {
+    .header_seven{
+      display: flex;
+    }
+  }
+  @media (max-width: 800px) {
+    .header_fourteen {
+      display: block; /* Hide the element at 800px */
+    }
+    .header_fifteen{
+        display: none;
+    }
+  }
+  @media (min-width: 800px) {
+    .header_fifteen{
+        display: block;
+    }
+  }

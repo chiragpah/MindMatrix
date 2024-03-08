@@ -1,0 +1,8 @@
+<div class="grid_box"> 
+    <ng-container *ngFor="let course of course" >
+        <!-- <app-product [product]="prod" *ngIf="selectedFilterRadioButton==='all' || prod.is_in_inventory.toString()=== selectedFilterRadioButton"></app-product> -->
+        <app-cards [items]="course" *ngIf=" searchedText==='' || course.name.toLowerCase().includes(searchedText.toLowerCase())"></app-cards>
+        <!-- <app-product (click)="selectedProduct=prod" [product]="prod" ></app-product> -->
+       <!-- console.log( course) -->
+    </ng-container>
+</div>

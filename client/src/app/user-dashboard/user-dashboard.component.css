@@ -1,0 +1,262 @@
+.container {
+    display: flex;
+    overflow: hidden; 
+    height: 100vh;
+    width: 2500px;
+    /* background-color: #1a2435; */
+   
+    
+  }
+  .main{
+    background-image: linear-gradient(to bottom, #0f141e, black);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .left {
+    width: 250px;
+    background-color: #131a25;
+    color: #ffffff; 
+    padding: 20px;
+    height: 500px;
+    margin: auto 40px;
+    border-radius: 20px;
+    
+  }
+  
+  .left h5 {
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .left h5:hover {
+    background-color: #1a222c;
+  }
+  
+  .right {
+    margin-top: 100px;
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  @media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .right {
+      flex-grow: initial;
+    }
+  }
+  .profile{
+    margin-top: 50px;
+    font-size: 20px;
+    
+  }
+  
+  .myElement {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  @media (min-width: 800px) {
+    .myElement {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  
+  /* .custom-container {
+    width: 60px;
+    height: 450px;
+    background-color: rgba(31, 41, 55, 0.9); 
+    border: 1px solid rgba(255, 255, 255, 0.113); 
+    border-radius: 5px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); 
+    margin-top: 80px;
+    margin-bottom: 80px;
+    position: sticky;
+    top: 120px;
+    left: 30px;
+  }
+  
+  @media (min-width: 800px) {
+    .custom-container {
+        width: 310px;
+    }
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  .full-width-flex-item {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 16px 12px;
+    cursor: pointer;
+    background-color: #1E293B; 
+  }
+  
+  .custom-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  
+  @media (min-width: 800px) {
+    .custom-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  .custom-element {
+    padding-left: 0.5rem;
+    display: none; 
+  }
+  
+  @media (min-width: 800px) {
+    .custom-element {
+      display: block; 
+    }
+  }
+  .custom-flex-center {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.75rem; 
+    cursor: pointer;
+    background-color: transparent;
+  }
+  .padding-left-2 {
+    padding-left: 0.5rem;
+  }
+  
+  @media (min-width: 800px) {
+    .display-block-at-800 {
+      display: block; 
+    }
+  }
+  
+  .hidden-by-default {
+    display: none; 
+  }
+  .full-width-flex-center {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  @media (min-width: 800px) {
+    .block-large-screen {
+      display: block;
+    }
+  }
+  
+  
+  .hidden {
+    display: none;
+  }
+  
+  
+  .padding-left-2 {
+    padding-left: 0.5rem; 
+  }
+  .full-width-flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 0.75rem; 
+    padding-right: 0.75rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem; 
+    cursor: pointer;
+    background-color: transparent;
+  }
+  
+  .padding-left-2 {
+    padding-left: 0.5rem; 
+  }
+  
+  @media (min-width: 800px) {
+    .visible-at-800px {
+      display: block;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+  
+  
+  .pl-2 {
+    padding-left: 0.5rem;
+  }
+  
+  @media (min-width: 800px) {
+    .block-800px {
+      display: block;
+    }
+  
+    .hidden {
+      display: none;
+    }
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .flex-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .padding {
+    padding: 1rem;
+  }
+  
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .transparent-background {
+    background-color: transparent;
+  }
+  
+  .pl-2 {
+    padding-left: 0.5rem; 
+  }
+  
+  @media screen and (min-width: 800px) {
+    .block-800px {
+      display: block;
+    }
+  
+    .hidden-800px {
+      display: none;
+    }
+  }
+  .pl-2 {
+    padding-left: 0.5rem;
+  }
+  
+  
+  @media screen and (min-width: 800px) {
+    .block-800px {
+      display: block;
+    }
+  
+    .hidden-800px {
+      display: none;
+    }
+  }
+   */
+  

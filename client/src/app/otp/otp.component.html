@@ -1,0 +1,52 @@
+
+  
+   
+    <!-- Modal -->
+    <!-- <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"  tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> -->
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header  justify-content-center align-items-center" style="display: flex;">
+            <h5 class="modal-title text-center " id="staticBackdropLabel" style="
+            margin: 0 ; margin-left: 35%;font-size: larger;"  >Verify Your Account</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" style="background-color: rgb(110, 84, 84);"></button>
+          </div>
+         
+          <div class="modal-body">
+            <form class="text-center" [formGroup]="loginform" (ngSubmit)="onsubmit()">
+                <div class="w-full flex items-center justify-center mt-2">
+                    <div class="circle">
+                      
+                      <img src="../../assets/avatar.png" alt="Icon" width="40" height="40">
+                    </div>
+                  </div><hr style=" border-style: none;">
+                  
+              <div class="form-group">
+              
+                <div class="passcode-wrapper">
+                    <input type="text" id="codeBox1" (keyup)="onKeyUpEvent(1, $event)" (focus)="onFocusEvent(1)" formControlName="digit_1" class="form-control">
+                    <input type="text" id="codeBox2" (keyup)="onKeyUpEvent(2, $event)" (focus)="onFocusEvent(2)" formControlName="digit_2" class="form-control">
+                    <input type="text" id="codeBox3" (keyup)="onKeyUpEvent(3, $event)" (focus)="onFocusEvent(3)" formControlName="digit_3" class="form-control">
+                    <input type="text" id="codeBox4" (keyup)="onKeyUpEvent(4, $event)" (focus)="onFocusEvent(4)" formControlName="digit_4" class="form-control">
+                </div>
+              </div>
+              <div class="w-full mt-5 lobut ">
+                <input type="submit" value="Verify OTP" class="button" style="width: 100%;" />
+              </div>
+             
+              
+              <h5 class="text-center pt-4 font-Poppins font" style="font-size: 14px;">
+                Go Back To SignUp?
+                <span class="text-blue pl-1 cursor-pointer loginbtn"  data-bs-toggle="modal" data-bs-target="#staticBackdrop" >  <a  href="" >Sign-Up</a></span>
+              </h5>
+              
+            </form>
+          </div>
+      
+          <div class="modal-footer">
+           
+           
+          </div>
+        </div>
+      </div>
+
+    <!-- </div> -->
