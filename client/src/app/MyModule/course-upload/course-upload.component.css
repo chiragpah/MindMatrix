@@ -1,0 +1,128 @@
+.card-border-gold{
+    border-color:whitesmoke;
+    border-radius: 8px;
+}
+.course-form {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.course-form input[type="text"],
+.course-form input[type="file"],
+.course-form textarea,
+.course-form input[type="number"] {
+    background-color:#f7f7f7; 
+}
+
+.course-form input[type="file"] {
+    
+    background-color: #f8f9fa; 
+    border: 1px solid #ced4da; 
+    
+    padding: 8px 12px; 
+    border-radius: 4px; 
+}
+
+
+.course-form input[type="file"]::-webkit-file-upload-button {
+    
+    font-size: 14px;
+    
+}
+
+.course-form input[type="file"] {
+    color: transparent;
+}
+.border-gold{
+    border-color: rgb(132, 122, 108);
+}
+.add-course-heading{
+    font-weight: 600;
+}
+.container.page-container {
+    display: grid;
+    place-items: center;
+    height: 100vh; 
+}
+@media (max-width: 768px) {
+    .course-form {
+        width: 90%;
+    }
+}
+
+
+@media (max-width: 576px) {
+    .course-form {
+        width: 95%;
+    }
+}
+.submitbutton{
+   
+        background-color: #0eb7f4;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+          font-size:16px;
+          font-family: Montserrat,Arial, Helvetica, sans-serif;
+          border-radius:10px;
+      
+      
+     
+}
+.submitbutton:hover{
+opacity: 1;
+}
+.ng-select{
+    padding-bottom: 0.25rem;
+}
+.ng-select.select{
+    background-color: white;
+    border-radius: 8px;
+}
+.ng-arrow-wrapper{
+    display: none;
+}
+
+input.ng-touched.ng-invalid{
+    border: red;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 8px red;
+}
+
+.notValidated{
+    color: red;
+}
+.input-container {
+    display: flex;
+    width: 50%;
+    display: inline-grid;
+  justify-content: flex-start;
+   
+}
+  .input-container label,
+  .input-container input {
+    margin-right: 20px;
+  }
+
+  .input-container2 {
+    display: flex;
+    width: 50%;
+    display: inline-grid;
+  justify-content: flex-start;
+  }
+  
+  .input-container2 label,
+  .input-container2 input {
+    margin-right: 20px;
+  }
+  
+
+  
+ 
+  .course-form {
+    background-color:white; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: rgb(15, 14, 14); 
+}

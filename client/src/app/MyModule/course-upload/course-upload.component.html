@@ -1,0 +1,93 @@
+
+<div class="container page-container" >
+    <div class="container">
+        <div class="h2 add-course-heading text-black mx-2 my-3">Add Course</div>
+        <div class="course-main">
+            <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <form id="courseForm" [formGroup]="addcourse" class="course-form "(ngSubmit)="submitForm()">
+                    <label class="form-label text-grey" for="course-name">Course Title*</label><br>
+                    <input type="text" class="form-control form-control-lg" id="course-name" formControlName="name" >
+                    <div class="notValidated mb-2" *ngIf="addcourse.get('name')?.invalid && addcourse.get('name')?.touched"> Please Enter a Valid Response</div>
+                   <br>
+                    <label for="course-description" class="form-label text-grey">Description*</label><br>
+                    <input type="text" class="form-control form-control-lg" id="course-description" formControlName="description" >
+                    <div class="notValidated mb-2" *ngIf="addcourse.get('description')?.invalid && addcourse.get('description')?.touched"> Please Enter a Valid Response</div>
+                    <br>
+                    <div class="input-container ">
+                        <label for="input1" >Price:*</label>
+
+                        <input type="text" id="input1" name="input1"   class="form-control form-control-lg" formControlName="price" >
+                        <div class="notValidated mb-2" *ngIf="addcourse.get('price')?.invalid && addcourse.get('price')?.touched"> Please Enter a Valid Response</div>
+                        </div>
+                        <div class="input-container p ">
+                        <label for="input2">Estimated Price<small>(optional)</small></label>
+                        <input type="text" id="input2" name="input2"  class="form-control form-control-lg" formControlName="estimatedprice">
+
+                      </div><br>
+                      <label for="course-Tags" class="form-label text-grey mt-3">Course Tags*</label>
+                      <br>
+                      <!-- <div class="notValidated mb-2" *ngIf="courseForm.get('thumbnail')?.invalid && courseForm.get('thumbnail')?.touched"> Please Enter a Valid Response</div> -->
+                      <input type="text" class="form-control form-control-lg" id="course-tags" formControlName="tags" >
+                      <div class="notValidated mb-2" *ngIf="addcourse.get('tags')?.invalid && addcourse.get('tags')?.touched"> Please Enter a Valid Response</div>
+                    <!-- <div class="notValidated mb-2" *ngIf="courseForm.get('description')?.invalid && courseForm.get('description')?.touched"> Please Enter a Valid Response</div> -->
+                    <br>
+                    <div class="input-container2 ">
+
+                        <label for="input1">Course Level*</label>
+                        <input type="text" id="input1" name="input1" formControlName="courselevel"  class="form-control form-control-lg" >
+                        <div class="notValidated mb-2" *ngIf="addcourse.get('courselevel')?.invalid && addcourse.get('courselevel')?.touched"> Please Enter a Valid Response</div>
+                    </div>
+                        <div class="input-container2 p">
+                        <label for="input2">Thumbnail *<small>(optional)</small></label>
+                        <input type="file" id="input2" name="input2" formControlName="thumbnail" style="width: 75%;" class="form-control form-control-lg"  (change)="onImageSelected($event)">
+
+                      </div>
+                      <!-- <div class="h3 mt-3 text-grey">
+                        Section
+                    </div> -->
+                    <div formArrayName="courseData">
+                        <div *ngFor="let section of sections.controls; let i = index" [formGroupName]="i">
+                          <h3>Section {{ i + 1 }}</h3>
+                          <label for="videoname">Video Title</label><br>
+                          <input type="text" class="form-control form-control-lg"  id="videoname" formControlName="title" >
+                          <div class="notValidated mb-2" *ngIf="addcourse.get('title')?.invalid && addcourse.get('title')?.touched"> Please Enter a Valid Response</div>
+                          <br>
+                          <label for="videourl">Video</label><br>
+                          <input type="file" class="form-control form-control-lg"  id="videourl" formControlName="videoUrl" (change)="onVideoSelected($event, i)" ><br>
+                          <div class="notValidated mb-2" *ngIf="addcourse.get('videoUrl')?.invalid && addcourse.get('videoUrl')?.touched"> Please Enter a Valid Response</div>
+                          
+                          <label for="videodescription">Video Description</label>
+                          <textarea   class="form-control form-control-lg"  id="videodescription" formControlName="description"></textarea><br>
+                          <div class="notValidated mb-2" *ngIf="addcourse.get('description')?.invalid && addcourse.get('description')?.touched"> Please Enter a Valid Response</div>
+                            
+                          <label for="videodescription">Video Length</label><br>
+                          <input type="number"  class="form-control form-control-lg"  id="videodescription" formControlName="videoLength"><br>
+                          <div class="notValidated mb-2" *ngIf="addcourse.get('videoLength')?.invalid && addcourse.get('videoLength')?.touched"> Please Enter a Valid Response</div>
+
+                          <button type="button" (click)="removeSection(i)"  class="btn btn-outline-primary delete-btn">Remove</button><br>
+                          <div class="clear"></div>
+                        </div>
+                      </div><br>
+                
+                      <button type="button" class="btn btn-outline-primary mb-5 float-left"  (click)="addSection()" >Add Section</button>&nbsp;&nbsp;
+                      <!-- <button class="btn btn-outline-primary mb-5 float-left"  (click)="addTest()" >Add Test</button> -->
+                      <button type="submit" class="btn  submitbutton btn-success">Submit</button>
+                </form>
+
+               
+               
+                   
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+
