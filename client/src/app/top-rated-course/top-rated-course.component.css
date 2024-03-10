@@ -1,0 +1,43 @@
+.grid_box {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    /* grid-template-columns: repeat(2,minmax(0,1fr));  
+    grid-template-columns: repeat(3,minmax(0,1fr));    */
+    gap: 20px;
+    margin-bottom: 3rem;
+    border: none;
+
+}
+
+@media(min-width:1024px) {
+    .grid_box {
+        gap: 25px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card_above_txt {
+        margin-top: 1rem;
+        font-size: 2rem;
+        /* Sets font size to 2rem (equivalent to 32px assuming the base font size is 16px) for large screens */
+        line-height: 50px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .grid_box {
+        gap: 35px;
+
+    }
+}
+
+@media(min-width:768px) {
+    .grid_box {
+        gap: 25px;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .overall_container {
+        width: 80%;
+        /* Sets width to 80% for screens wider than 800px */
+    }
+}

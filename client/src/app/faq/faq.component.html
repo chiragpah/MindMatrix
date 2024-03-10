@@ -1,0 +1,13 @@
+<div class="faq-container">
+    <h2 style="text-align: center;"><u>Frequently Asked Questions?</u></h2>
+    <div class="faq-list">
+      <div class="faq-item" *ngFor="let faq of faqs; let i = index">
+        <div class="question-wrapper" (click)="toggleAnswer(i)">
+          <span class="plus-minus-icon" [ngClass]="{'minus': faq.showAnswer, 'plus': !faq.showAnswer}">&#43;</span>
+          <h3>{{ faq.question }}</h3>
+        </div>
+        <p class="answer" [class.show]="faq.showAnswer" style="padding-left: 20px;">{{ faq.answer }}</p>
+      </div>
+    </div>
+  </div>
+  

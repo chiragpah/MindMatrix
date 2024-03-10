@@ -1,0 +1,42 @@
+<!-- <div class="container">
+    
+    <div class="main-container">
+      <div class="side-nav">
+        <app-side-nav></app-side-nav>
+      </div>
+      <div class="main">
+       <app-main></app-main>
+       
+       <app-course-upload></app-course-upload>
+      </div>
+      
+    </div>
+  </div> -->
+  <div class="container">
+    <div class="main-container">
+          <div class="side-nav">
+      <app-side-nav (gettheComp)="gottheComp($event)"></app-side-nav>
+    </div>
+    <!-- Right Section -->
+    <div class="main">
+      <div *ngIf="currentComponent === 1">
+        <app-main></app-main>
+      </div>
+      <div *ngIf="currentComponent === 2">
+        <!-- <app-users></app-users> -->
+      </div>
+      <div *ngIf="currentComponent === 3">
+        <app-course-upload></app-course-upload>
+      </div> 
+      <div *ngIf="currentComponent === 4">
+        <!-- <app-add-course></app-add-course> -->
+      </div>
+      <div *ngIf="currentComponent === 5">
+        <!-- <app-view-course></app-view-course> -->
+      </div>
+      <div *ngIf="currentComponent === 6">
+        <!-- <app-help></app-help> -->
+      </div>
+    </div>
+    </div>
+    </div>
