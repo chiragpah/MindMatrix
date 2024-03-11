@@ -1,0 +1,42 @@
+<div class="container">
+  <div class="question-section">
+    <div class="add-question">
+      <textarea placeholder="Type your question" [(ngModel)]="newQuestionText"></textarea>
+      <button (click)="addComment()">Ask Question</button>
+    </div>
+
+    <!-- <div class="questions">
+      <div *ngFor="let question of questions" class="question">
+        <p>{{ question.user.name }} asked: {{ question.text }}</p>
+
+        <div class="comments">
+          <div *ngFor="let comment of question.comments" class="comment">
+            <p>{{ comment.user.name }} commented: {{ comment.text }}</p>
+
+           
+            <div *ngIf="isAdmin; else replyTemplate" class="reply-input">
+              <textarea placeholder="Type your reply" [(ngModel)]="newReplyText"></textarea>
+              <button (click)="sendReply(comment)">Send Reply</button>
+            </div>
+            <ng-template #replyTemplate>
+              <p>Only admins can reply.</p>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
+<!-- 
+<div>
+
+    <form [formGroup]="qaForm" id="form" (ngSubmit)="submitForm()">
+      <label for="question">Question:</label>
+      <input type="text" id="question" formControlName="question" required>
+  
+      <label for="answer">Answer:</label>
+      <input type="text" id="answer" formControlName="answer" required>
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div> -->

@@ -1,0 +1,60 @@
+h3{
+    margin-top: .5rem;
+}.faq-container {
+    display: flex;
+    margin: 1rem;
+    flex-direction: column;
+   
+    align-items: center;
+    height: 100vh; /* Utilize full viewport height */
+    color: #fff;
+  }
+  h2{
+    padding-bottom: 4rem;
+  }
+  .faq-list {
+    width: 80%; /* Adjust width as needed */
+    max-width: 800px; /* Max width to prevent content from becoming too wide */
+  }
+  
+  .faq-item {
+    border-bottom: 1px solid #ccc; /* Add border between FAQ items */
+    padding-bottom: 20px; /* Add some padding between items */
+  }
+  
+  .question-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .plus-minus-icon {
+    margin-right: 10px;
+    font-size: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .plus-minus-icon.minus {
+    transform: rotate(45deg);
+  }
+  
+  .answer {
+    display: none;
+    padding-left: 20px;
+  }
+  
+  .answer.show {
+    display: block;
+    padding-top:1rem ;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .faq-container {
+      padding: 10px;
+    }
+  
+    .plus-minus-icon {
+      font-size: 20px;
+    }
+  }
+   

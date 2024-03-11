@@ -1,0 +1,229 @@
+.Modal {
+    position: absolute;
+    /* display: flex;
+    flex-direction: column; */
+    z-index: 100;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 95%;
+
+    margin: auto;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 16px;
+    border: 2px solid white;
+    background-color: rgb(15 23 42)
+}
+
+form {
+    margin-top: 1.75rem;
+
+}
+
+.Modal_box {
+    width: 100%;
+}
+
+.RegistrationModal {
+    top: 60%
+}
+
+.Modal_Title {
+    font-size: 25px;
+    color: #fff;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.lbl1_user {
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+
+}
+
+.icon_1 {
+    cursor: pointer;
+    margin-left: 1.5rem;
+    margin-top: 0.75rem;
+}
+
+.validate_msg {
+    color: crimson;
+}
+
+.txt1_user {
+    width: 100%;
+    padding-left: 0.5rem;
+    height: 40px;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    color: #fff;
+    border-style: solid;
+    padding-right: 0.5rem;
+    margin-top: 1.0rem;
+    background-color: transparent;
+    outline: none;
+    border: 1px solid #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.txt1_user::placeholder {
+    color: #fff;
+}
+
+button.close-btn {
+    position: absolute;
+    right: 15px;
+    background-color: transparent;
+    color: white;
+    padding: 5px;
+    border: 0px;
+    font-size: 20px;
+}
+
+.svg_1 {
+    position: absolute;
+    bottom: 0.75rem;
+    right: 0.5rem;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.submit_sec {
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.submit_btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 1px solid blue;
+    align-items: center;
+    padding-top: 1.25rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 9999px;
+    cursor: pointer;
+    min-height: 45px;
+    background-color: #2190ff;
+    width: 100%;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.form_box {
+    width: 100%;
+    margin-top: 1.25rem;
+    /* Equivalent to mt-5 */
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.sample_txt {
+    text-align: center;
+    padding-top: 1rem;
+    /* Equivalent to pt-4 */
+    font-family: 'Poppins', sans-serif;
+    /* Equivalent to font-Poppins */
+    font-size: 14px;
+    color: #fff;
+}
+
+.svg_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.other_login {
+    text-align: center;
+    padding-top: 1.25rem;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+.sign_up {
+
+    color: #2190ff;
+    padding-left: 0.5 rem;
+    cursor: pointer;
+    padding-bottom: 1rem;
+
+}
+
+.password_div {
+    width: 100%;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.svg_avatar_div {
+    display: flex;
+    align-items: center;
+    /* Align items vertically at the center */
+    justify-content: center;
+    /* Center items horizontally */
+    margin-top: 0.75rem;
+
+}
+
+@media (max-width: 800px) {
+    .modal {
+        max-width: 450px;
+    }
+}
+
+.snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    transform: translateX(-50%);
+}
+
+.snackbar.show {
+    visibility: visible;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}

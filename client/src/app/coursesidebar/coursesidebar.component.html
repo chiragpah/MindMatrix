@@ -1,0 +1,54 @@
+<div class="side_bar1">
+    <div class="side_bar2" >
+      <div class="side_bar3" (click)="selectVideo(courseList)"[class.active]="isSelected">
+        <div style="padding-right: 1.25rem;">
+          <svg
+            stroke="currentColor"
+            fill="currentColor"
+            stroke-width="0"
+            viewBox="0 0 24 24"
+            class="mr-2"
+            color="#1cdada"
+            height="25"
+            width="25"
+            xmlns="http://www.w3.org/2000/svg"
+            style="color: rgb(28, 218, 218)"
+          >
+            <path fill="none" d="M0 0h24v24H0V0z"></path>
+            <path
+              d="M9 7v8l7-4zm12-4H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z"
+            ></path>
+          </svg>
+        </div>
+        <h1 
+          class="side_bar4"
+        >
+         {{courseList.title}}
+        </h1>
+      </div>
+      <h5 class="side_bar5">{{courseList.videoLength}} Minutes</h5>
+    </div>
+    <div class="side_bar6">
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
