@@ -1,0 +1,26 @@
+<div class="score-dialog">
+    <h2 class="score-dialog-title">Quiz Result</h2>
+    <p class="score-dialog-content" [ngClass]="{'failed': data.score < 4, 'passed': data.score >= 4}">
+      Your score: {{ (data.score/data.totalQuestions*100) }}%
+      <br>
+      <label>
+        <span *ngIf="data.score < 4">Sorry! You Have Failed The Test</span>
+        <span *ngIf="data.score >= 4">Congratulations! You Have Passed The Test</span>
+      </label>
+    </p>
+  
+    <!-- <div *ngFor="let question of data.questions" class="question-container">
+        <p class="question">Q{{ question.questionNumber }}</p>
+        <p class="user-answer" [ngClass]="{ 'wrong-answer': question.userAnswer !== question.correctAnswer }">
+          <ng-container *ngIf="question.userAnswer; else notAttempted">Your Answer: {{ question.userAnswer }}</ng-container>
+          <ng-template #notAttempted>Not Attempted</ng-template>
+        </p>
+      </div> -->
+  
+  
+    <div class="score-dialog-actions">
+      <!-- <button mat-button [mat-dialog-close]="close">Close</button> -->
+      <button mat-button (click)="retakeQuiz()">Take a Retest</button>
+      <button mat-button (click)="closeDialogAndNavigate()">Back to Courses</button>
+    </div>
+  </div>

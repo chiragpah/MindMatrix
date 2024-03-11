@@ -1,0 +1,48 @@
+<!-- QUIZ -->
+
+<section >
+    <div class="text-container">
+      <h1>Lets Take a Quiz!</h1>
+    </div>
+    <div *ngFor="let question of questions" [id]="'section-' + question.id" class="section-{{ question.id }}">
+      <main>
+        <div class="text-container">
+          <p>QUESTION {{ question.id }} OF {{ questions.length }}</p>
+          <p>{{ question.question }}</p>
+        </div>
+        <form>
+          <div class="quiz-options">
+            <div *ngFor="let option of question.options" class="option">
+    
+              <input type="radio" class="input-radio" [class]="isCorrectOption(question, option.id)"
+                [id]="question.id + '-' + option.id" [name]="'question-' + question.id" [value]="option.id" (click)="onOptionSelect(question.id, option.id) " (change)="onEveryOptionSelect(question.id, option.id)"required>
+    
+              <label class="radio-label " [for]="question.id + '-' + option.id">
+                
+                <span class="alphabet">{{ option.id | uppercase }}</span> {{ option.text }}
+    
+                <!-- Section for the tick and cross Mark -->
+                <ng-container *ngIf="isCorrectOptionselected(question.id, option.id); else wrongOption">
+                  <img class="icon jdsjkefkefkefefexco"
+                    src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588518387/jdsjkefkefkefefexco.svg" alt="">
+                </ng-container>
+                <ng-template #wrongOption>
+                  <img class="icon jfdedgwfzexf4hjin"
+                    src="https://res.cloudinary.com/dvhndpbun/image/upload/v1588517753/jfdedgwfzexf4hjin.svg">
+                </ng-template>
+              </label>
+            </div>
+          </div>
+        </form>
+      </main>
+    </div>
+    <div class="text-container score-dialog-actions">
+      <button type="button" (click)="onSubmit()">Submit</button>
+    </div>
+    
+  </section>
+  <div class="score-counter">
+    <p class="score-text">CORRECT: {{ correctScore }}/10</p>
+    <p class="score-text">QUESTIONS LEFT: {{questionsLeft}} </p>
+  </div>
+  <app-score-dialog *ngIf="display"></app-score-dialog>

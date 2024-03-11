@@ -1,0 +1,83 @@
+<div class="container">
+    <div class="container">
+        <div class="h2 add-course-heading text-grey mx-2 my-3">Add Course</div>
+        <div class="course-main">
+            <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <form id="courseForm" [formGroup]="courseForm"(ngSubmit)="submitForm()">
+                    <label class="form-label text-grey" for="course-name">Course Title*</label>
+                    <input type="text" class="form-control form-control-lg" id="course-name" formControlName="name" >
+                    <div class="notValidated mb-2" *ngIf="courseForm.get('name')?.invalid && courseForm.get('name')?.touched"> Please Enter a Valid Response</div>
+                    <label for="course-description" class="form-label text-grey">Description*</label>
+                     <input type="text" class="form-control form-control-lg" id="course-description" formControlName="description" >
+                    
+                    <div class="notValidated mb-2" *ngIf="courseForm.get('description')?.invalid && courseForm.get('description')?.touched"> Please Enter a Valid Response</div>
+                    
+                    <div><label for="course-thumbnail" class="form-label text-grey mt-3">Thumbnail*</label>
+                    <input type="file" (change)="onImageSelected($event)">
+                </div>
+                    <div class="notValidated mb-2" *ngIf="courseForm.get('thumbnail')?.invalid && courseForm.get('thumbnail')?.touched"> Please Enter a Valid Response</div>
+                    <!-- <input type="text" class="form-control form-control-lg" id="course-thumbnail" formControlName="thumbnail" > -->
+                   <div> <label for="course-trailer" class="form-label text-grey mt-3">Trailer*</label>
+                   <input type="file" >
+                    <div class="notValidated mb-2" *ngIf="courseForm.get('trailer')?.invalid && courseForm.get('trailer')?.touched"> Please Enter a Valid Response</div>
+                </div>
+                    <!-- <input type="text" class="form-control form-control-lg" id="course-trailer" formControlName="trailer" > -->
+                    <label class="form-label text-grey" for="course-price">Price</label>
+                    <div class="input-group-prepend">
+                
+                        <input type="number" class="form-control form-control" min="0" id="course-price" formControlName="price" >
+                    </div>
+                    <div class="notValidated mb-2" *ngIf="courseForm.get('price')?.invalid && courseForm.get('price')?.touched"> Please Enter a Valid Response</div>
+                    <label class="form-label text-grey">Tags</label>
+                    <input type="text" class="form-control">
+                </form>
+
+                
+            <!-- <div *ngFor="let module of modules; let i=index">
+                <h3>Module {{ i + 1 }}</h3>
+                <label>Title:</label>
+                <input name="moduleTitle{{i}}" type="text" [(ngModel)]="module.title" required>
+                <label>Description:</label>
+                <textarea name="moduleDescription{{i}}" [(ngModel)]="module.description" required></textarea>
+                <label>Video Length:</label>
+                <input name="moduleVideoLength{{i}}" type="number" [(ngModel)]="module.videoLength" required>
+                <input name="moduleVideo{{i}}" type="file" (change)="onFileSelected($event, i)">
+            </div> -->
+
+            <div class="container">
+                <h2>Add Module</h2>
+                <form [formGroup]="moduleForm" (ngSubmit)="submitForm()">
+                  <div formArrayName="modules">
+                    <div *ngFor="let module of modules.controls; let i = index" [formGroupName]="i" class="module-group">
+                      <div class="form-group">
+                        <label for="title{{ i }}">Title:</label>
+                        <input type="text" class="form-control" [id]="'title' + i" formControlName="title" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="description{{ i }}">Description:</label>
+                        <textarea class="form-control" [id]="'description' + i" formControlName="description" required></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="videoLength{{ i }}">Video Length:</label>
+                        <input type="text" class="form-control" [id]="'videoLength' + i" formControlName="videoLength" required>
+                      </div>
+                      <div class="form-group">
+                        <label for="video{{ i }}">Video File:</label>
+                        <input type="file" class="form-control-file" [id]="'video' + i" (change)="onVideoSelected($event, i)" required>
+                      </div>
+                      <button type="button" class="btn btn-danger" (click)="removeModule(i)">Remove Module</button>
+                      <hr>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary" (click)="addModule()">Add Module</button>
+                  <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+              </div>
+              
+        </div>
+    </div>
+</div>
+</div>
+</div>
