@@ -1,0 +1,13 @@
+<!-- HTML for a single course card -->
+<div class="course-card">
+  <img [src]="course.thumbnail.url" alt="Course Image" class="course-image">
+  <div class="course-details">
+    <h2 class="course-title">{{course.name}}</h2>
+    <p class="course-description">Course Description goes here. Provide a brief overview of the course content.</p>
+    <div class="course-metadata">
+      <span class="course-level">{{course.level}}</span>
+      <span class="course-duration">Duration: 4 weeks</span>
+      <span><button class="btn btn-primary" (click)="gettheId(course._id)">Delete Course</button></span>
+    </div>
+  </div>
+</div>

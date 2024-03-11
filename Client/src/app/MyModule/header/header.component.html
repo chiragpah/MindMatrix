@@ -1,0 +1,42 @@
+<div class="body">
+  <div class="header_first">
+    <div class="header_two">
+      <div class="header_three">
+        <div class="header_four">
+          <div>
+            <a class="header_five text-gradient" href="/">MindMatrix</a>
+          </div>
+          <div class="header_six">
+            <div class="header_seven">
+              <a routerLink="/"> <span class="header_eight">Home</span></a>
+              <a routerLink="/courses">
+                <span class="header_nine">Courses
+                </span></a
+              >
+              <a routerLink="/admin-dashboard"><span class="header_ten">About</span></a
+              ><a href="/course-player"><span class="header_eleven">Policy</span></a
+              ><a href="/faq"><span class="header_twelve">FAQ</span></a>
+            </div>
+           
+            <div *ngIf="isloggedin; else signInUpBlock" class="img">
+              <a routerLink="/user-dashboard">
+                <img src="../../../assets/images/avatar.png" alt="User Icon" />
+              </a>
+            </div>
+
+            <ng-template #signInUpBlock>
+              <!-- User is not logged in, show sign in/up options -->
+              <div class="img" (click)="openLoginModal()">
+                <a routerLink="/admin-dashboard"></a>SignIn/Up<img
+                  src=""
+                  alt=""
+                />
+              </div>
+            </ng-template>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

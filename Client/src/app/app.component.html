@@ -1,0 +1,16 @@
+<!-- <homepage></homepage> --> 
+ <!-- <top-rated-course></top-rated-course> -->
+ <app-header (openLoginModalEvent)="openLoginModal()"></app-header> 
+ <app-login  *ngIf="isModalOpen" (switchToSignupClicked)=" toggleSignupModal($event)"></app-login>
+<app-registration *ngIf="signupModalVisible" (switchToLoginClicked)="toggleLoginModal()"></app-registration> 
+
+
+<router-outlet></router-outlet> 
+ <app-footer></app-footer> 
+ <!-- <app-courseplayer></app-courseplayer> --> 
+<!-- <app-chat></app-chat> -->
+<!-- <admin-dashboard></admin-dashboard> -->
+
+<!-- <app-login  (launchLogin)="launchLoginModal()"  (switchToSignupClicked)="toggleSignupModal(true)"  [showModal]="signupModalVisible" ></app-login> -->
+<!-- <router-outlet></router-outlet> -->
+<!-- <app-registration [showModal]="signupModalVisible"  (switchToLoginClicked)="toggleLoginModal(true)"[showModal]="loginModalVisible"></app-registration> -->

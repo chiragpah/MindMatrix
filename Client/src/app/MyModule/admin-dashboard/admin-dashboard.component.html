@@ -1,0 +1,28 @@
+
+<div class="container">
+<div class="left side-nav">
+  <app-sidebar (gettheComp)="gottheComp($event)"></app-sidebar>
+</div>
+<!-- Right Section -->
+<div class="right main">
+  <div *ngIf="currentComponent === 1">
+    <app-notification></app-notification>
+  </div>
+  <div *ngIf="currentComponent === 2">
+    <app-main-content></app-main-content>
+  </div>
+  <div *ngIf="currentComponent === 3">
+    <app-users></app-users>
+  </div>
+  <div *ngIf="currentComponent === 4">
+    <app-add-course></app-add-course>
+  </div>
+  <div *ngIf="currentComponent === 5">
+    <app-view-course></app-view-course>
+  </div>
+  <div *ngIf="currentComponent === 6">
+    <app-help></app-help>
+  </div>
+</div>
+
+</div>

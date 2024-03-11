@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    margin: 0;
+  }
+  
+  .left {
+    width: 20%; /* Set a fixed width or use a percentage based on your design */
+    min-width: 200px; /* Minimum width for smaller screens */
+    background-color: #f0f0f0; /* Adjust the background color as needed */
+    padding: 20px;
+  }
+  
+  .right {
+    flex-grow: 1; /* Allow the right section to grow and take remaining space */
+    padding: 20px;
+  }
+ 
+  /* Add media queries for responsiveness */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+    }
+  
+    .left {
+      width: 100%; /* Take full width on smaller screens */
+    }
+  }
+
+  .main-container {
+    display: flex;
+    .side-nav {
+      width: auto;
+      min-width: 230px;
+      min-height: calc(100vh - 70px);
+      background-color: #113c60;
+      color: #fff;
+      box-shadow: 5px 5px 5px #939393;
+      @media only screen and (max-width: 1300px) {
+        width: 100px;
+        min-width: 100px;
+      }
+    }
+    .main {
+      padding: 30px;
+      background-color: #c1d3e2;
+    }
+  }
+  

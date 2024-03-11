@@ -1,0 +1,61 @@
+/* Alert Styles */
+.alert {
+  position: relative;
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+  font-size: 1.2em;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 1em;
+  width: calc(100% - 20px);
+}
+
+/* Alert Colors */
+.alert-success {
+  background-color: #2ecc71;
+}
+.alert-warning {
+  background-color: #f39c12;
+}
+.alert-danger {
+  background-color: #e74c3c;
+}
+
+/* Button Styles */
+.button {
+  border-radius: 5px;
+  border: solid 1px #000000;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 1.2em;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  padding: 1em;
+  width: 40%;
+}
+
+/* Reset Button Styles */
+
+
+/* Close Button Styles */
+.close {
+  position: absolute;
+  top: 50%;
+  right: 1%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  color: #999;
+  cursor: pointer;
+  &:hover {
+    color: inherit;
+  }
+}
+
+/* Remove button outline on focus */
+button:focus {
+  outline: 0;
+}

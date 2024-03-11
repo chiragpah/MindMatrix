@@ -1,0 +1,375 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+.body{
+  background-image: linear-gradient(to bottom, #111827, black);
+ 
+}
+.card_above_txt{
+  text-align: center; /* Centers text */
+  font-family: 'Poppins', sans-serif; /* Sets font-family to Poppins */
+  font-size: 25px; /* Sets font size to 25px */
+  line-height: 30px; 
+  color: #fff;
+  font-weight: 800; /* Sets font weight to extrabold */
+letter-spacing: -0.025em; 
+}
+.overall_container{
+  width: 90%; 
+margin: auto;
+}
+.grid_box{
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+    grid-template-columns: repeat(2,minmax(0,1fr));  
+  grid-template-columns: repeat(3,minmax(0,1fr));   
+  gap: 20px;
+  margin-bottom: 3rem;
+  border: none;
+
+}
+
+@media(min-width:1024px){
+  .grid_box{
+      gap: 25px;
+      grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+  .card_above_txt {
+      margin-top: 1rem;
+      font-size: 2rem; /* Sets font size to 2rem (equivalent to 32px assuming the base font size is 16px) for large screens */
+      line-height: 50px;
+  }
+}
+@media (min-width: 1280px) {
+  .grid_box{
+      gap: 35px;
+
+}
+}
+@media(min-width:768px){
+  .grid_box{
+      gap: 25px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .overall_container {
+      width: 80%; /* Sets width to 80% for screens wider than 800px */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.one{
+  width: 100%;
+
+
+}
+.two{
+  position: absolute;
+  top: 100px;
+  height: 40vh;
+  left: 5px;
+  width: 40vh;
+  border-radius: 50%;
+  
+  background: linear-gradient(147.92deg, hsla(239, 76%, 53%, 0.456) 10.41%, hsla(0, 0%, 100%, 0) 89.25%);
+
+  animation: changeBackground 8s infinite alternate;
+}
+.three{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-top: 70px;
+  z-index: 10;
+  
+}
+.four{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 150px;
+  
+
+
+}
+.five{
+  color:black;
+  font-size: 30px;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  width: 100%;
+  font-weight: 600;
+  font-family: 'Josefin', sans-serif;
+  padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+
+}
+.six{
+  color: rgba(0,0,0,0.67);
+  font-family: 'Josefin', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+.seven{
+  width: 90%;
+  height: 50px;
+  background-color: black;
+  position: relative;
+
+}
+.eight{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+ border-top-right-radius: 5px;
+ border-bottom-right-radius: 5px;
+  background-color: #39c1f3;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.nine{
+  width: 90%;
+  display: flex;
+  align-items: center;
+
+
+}
+img{
+border-radius: 50%;
+margin:-0.5rem;
+}
+.ten{
+  font-family: 'Josefin', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+}
+.img_style{
+object-fit: contain;
+width: 90%;
+max-width: 90%;
+width: 1500px;
+max-width: 85%;
+height: auto;
+  z-index: 10;
+}
+input{
+  background-color: transparent; 
+  border-width: 1px;
+  border-radius: 5px;
+  padding: 0.5rem;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  columns: #0000004e;
+  font-size: 20px;
+  font-weight: 500;
+  color:#fff;
+  font-family: 'Josefin', sans-serif;
+}
+input::placeholder{
+  color: #ffffffdd;
+}
+
+@keyframes changeBackground {
+  0%,100%{
+      opacity: 1;
+  }
+  16.67%{
+      opacity: 0.9;
+  }
+  33.33%{
+      opacity: 0.8;
+  }
+  50%{
+      opacity: 0.6;
+  }
+  66.87%{
+      opacity: 0.5;
+  }
+  83.33%{
+      opacity: 0.4;
+  }
+
+  
+}
+@media (min-width: 1100px) {
+  .two{
+      width: 600px;
+      height: 600px;
+  }
+}
+
+@media (min-width: 1000px) {
+ .one{
+  display: flex;
+  align-items: center;
+ }
+  .two{
+      top: unset;
+     
+  }
+  .three{
+      padding-top: 0;
+      min-height: 100vh;
+      width: 40%;
+  }
+  .four{
+      text-align: left;
+      margin-top: 0;
+      width: 60%;
+  }
+  .five{
+      font-size: 70px;
+      line-height: 75px;
+      
+  }
+  .ten{
+      padding-left: 0.75rem;
+  }
+}
+@media (min-width: 1100px) {
+  .two{left: 8px;}
+  .five{
+      width: 78%;
+   }
+   .six,.seven,.nine{
+      width:78%;
+   }
+}
+
+@media (min-width: 1500px) {
+  .two{
+      left: 14px;
+      width: 700px;
+      height: 700px;
+   }
+   .five{
+      width: 60%;
+   }
+   .six,.seven,.nine{
+      width: 55%;
+   }
+   
+}
+
+
+
+
+/* section css */
+/* Equivalent styles for Tailwind CSS classes */
+
+/* w-[90%] */
+.width-90 {
+  width: 90%;
+}
+
+/* 800px:w-[80%] */
+@media (min-width: 800px) {
+  .width-80 {
+    width: 80%;
+  }
+}
+
+/* m-auto */
+.margin-auto {
+  margin: auto;
+}
+
+
+
+/* Equivalent styles for Tailwind CSS classes */
+
+/* text-center */
+.text-center {
+  text-align: center;
+}
+
+/* font-Poppins */
+.font-Poppins {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* text-[25px] */
+.text-size-25 {
+  font-size: 25px;
+}
+
+/* leading-[35px] */
+.line-height-35 {
+  line-height: 35px;
+}
+
+/* sm:text-3xl */
+@media (min-width: 640px) {
+  .text-size-3xl {
+    font-size: 1.875rem; /* Equivalent to 30px */
+  }
+}
+
+/* lg:text-4xl */
+@media (min-width: 1024px) {
+  .text-size-4xl {
+    font-size: 2.25rem; /* Equivalent to 36px */
+  }
+}
+
+/* dark:text-white */
+.dark-text-white {
+  color: #fff;
+}
+
+/* 800px:!leading-[60px] */
+@media (min-width: 800px) {
+  .line-height-60 {
+    line-height: 60px !important; /* Override leading-[60px] on screens larger than 800px */
+  }
+}
+
+/* text-[#000] */
+.text-black {
+  color: white;
+}
+
+/* font-[700] */
+.font-weight-700 {
+  font-weight: 700;
+}
+
+/* tracking-tight */
+.tracking-tight {
+  letter-spacing: -0.025em;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, rgb(62, 127, 217) 2.34%, rgb(92, 59, 214) 100.78%);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.toprated {
+  text-align: center;
+  margin-top: 20px; /* Adjust margin-top as needed */
+}
+
+.toprated h2 {
+  font-size: 24px; /* Adjust font size as needed */
+  /* color: #333; Adjust text color as needed */
+  font-weight: bold; /* Adjust font weight as needed */
+}
+
+
