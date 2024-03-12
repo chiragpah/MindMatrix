@@ -1,0 +1,18 @@
+<div class="containers">
+  <div class="question-section">
+    <div class="add-question">
+      <textarea
+        placeholder="Type your question"
+        [(ngModel)]="newQuestionText"
+      ></textarea>
+      <button mat-raised-button (click)="addComment()" (click)=" loadComments()">Ask Question</button>
+    </div>
+    
+    <div
+      *ngFor="let comment of comments"
+      class="container justify-content-center mt-5 border-left border-right"
+    >
+      <app-comment-template [comment]="comment"></app-comment-template>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="feedback-form">
+    <h2 style="text-align: center;">Feedback Form</h2>
+    <form (ngSubmit)="submitFeedback()" #feedbackForm="ngForm" novalidate>
+     
+   
+      
+        <div class="form-group">
+            <label for="comment">Message:</label>
+            <textarea id="comment" name="comment" [(ngModel)]="formData.comment" required #comment="ngModel"></textarea>
+            <div *ngIf="comment.errors?.['required'] && (comment.dirty ||comment.touched)" class="error-message">
+                <div *ngIf="comment.errors?.['required']">Message is required.</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="rating">Rating:</label>
+            <div class="star-rating">
+                <app-star-rating (ratingSelected)="onRatingSelected($event)"></app-star-rating>
+            </div>
+            <input type="hidden" id="rating" name="rating" [(ngModel)]="formData.rating">
+            <span *ngIf="!ratingSelected" class="error-message"></span>
+        </div>
+        <br>
+        <button type="submit" [disabled]="feedbackForm.invalid || !ratingSelected">Submit</button>
+    </form>
+</div>

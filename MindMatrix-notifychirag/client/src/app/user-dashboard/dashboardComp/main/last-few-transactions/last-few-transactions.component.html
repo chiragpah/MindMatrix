@@ -1,0 +1,22 @@
+<div class="transactions">
+  <div class="title">Last few transactions</div>
+  <div class="transaction-wrapper">
+    <div class="transaction" *ngFor="let order of orders">
+      <div class="image">
+        <img src="../../../../../assets/avatar.png" alt="" />
+      </div>
+      <div class="title">{{ order.userId}}</div>
+      <div class="price"></div>
+      <div class="shop-location">
+        <!-- <div class="shop">{{ order.courseId }}</div> -->
+        <div class="location">{{order.payment_info.transactionId}}</div>
+      </div>
+      <div
+        class="status"
+      
+      >
+        Payment Success
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="container">
+    <ng-container *ngFor="let notification of notifications" >
+        <!-- <app-product [product]="prod" *ngIf="selectedFilterRadioButton==='all' || prod.is_in_inventory.toString()=== selectedFilterRadioButton"></app-product> -->
+        <app-notification-template [notification_sent]="notification"></app-notification-template>
+        <!-- <app-product (click)="selectedProduct=prod" [product]="prod" ></app-product> -->
+       <!-- console.log( course) -->
+    </ng-container>
+</div>

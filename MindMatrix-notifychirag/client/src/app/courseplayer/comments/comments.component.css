@@ -1,0 +1,62 @@
+.containers{
+    max-width: 800px;
+    margin: 20px auto;
+    border: 2px solid white;
+    border-radius: 5px;
+
+}
+
+
+.question-section {
+    margin:40px 20px;
+}
+
+.add-question textarea {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.questions {
+    margin-top: 20px;
+}
+
+.question {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comments {
+    margin-top: 10px;
+}
+
+.comment {
+    border: 1px solid #eee;
+    padding: 8px;
+    margin-bottom: 8px;
+}
+
+.reply-input textarea {
+    width: 100%;
+    height: 20%;
+    margin-bottom: 5px;
+}
+
+.reply-input button {
+    background-color: white;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+.container{
+	background-color: #eef2f5;
+	width: 400px;
+}
+
+
+
+
+

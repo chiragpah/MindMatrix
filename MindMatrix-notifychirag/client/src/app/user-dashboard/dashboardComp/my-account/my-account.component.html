@@ -1,0 +1,34 @@
+<div class="form-container">
+  <form [formGroup]="profileForm" (ngSubmit)="updateProfile()">
+
+    <div class="profile-photo-section">
+      <div class="profile-photo-container">
+        <img id="profilePhotoPreview" src="../../../../../assets/images/avatar.png" alt="Profile Photo" class="profile-photo">
+        <!-- <div class="overlay">
+          <button type="button" style="background-color: rgb(7, 7, 161);" id="changePhotoBtn" class="photo-btn" (click)="selectProfilePhoto()">
+            <i class="fa-solid fa-camera"></i>
+          </button>
+          <button type="button" id="deletePhotoBtn" class="photo-btn" (click)="deleteProfilePhoto()">
+            <i class="fa fa-trash"></i>
+          </button>
+        </div> -->
+        <!-- uploading the profile photo  -->
+        <!-- <input type="file" id="profilePhoto" class="file-input" (change)="previewProfilePhoto($event)" accept="image/*"> -->
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="mb-3">
+        <label for="fullName" class="form-label">Full Name</label>
+        <input type="text" formControlName="fullName" class="form-control" id="fullName">
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" formControlName="email" class="form-control" id="email" [readonly]="true">
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary" (click)="callit()">Update Profile</button>
+  </form>
+</div>

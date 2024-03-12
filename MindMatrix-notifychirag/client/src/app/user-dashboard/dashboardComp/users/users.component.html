@@ -1,0 +1,17 @@
+<table class="table align-middle mb-0 bg-white" style="width: 1200px; margin: 2rem 4rem;">
+    <thead class="bg-light">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let user of usersres">
+        <tr>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+  

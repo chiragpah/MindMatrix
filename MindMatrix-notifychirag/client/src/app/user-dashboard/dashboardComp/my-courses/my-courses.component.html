@@ -1,0 +1,16 @@
+<table class="table align-middle mb-0 bg-white" style="width: 500px; margin: 2rem 4rem;">
+    <thead class="bg-light">
+      <tr>
+        <th>Course Name</th>
+        <th>Level</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let course of courseDetails">
+        <tr>
+          <td>{{ course.name }}</td>
+          <td>{{ course.level }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>

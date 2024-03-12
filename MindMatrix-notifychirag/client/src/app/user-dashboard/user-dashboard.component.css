@@ -1,0 +1,76 @@
+.container {
+    display: flex;
+    overflow: hidden; 
+    height: 100vh;
+    width: 2500px;
+    /* background-color: #1a2435; */
+   
+    
+  }
+  .main{
+    background-image: linear-gradient(to bottom, #161c2a, black);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .left {
+    width: 250px;
+    background-color: #131a25;
+    color: #ffffff; 
+    padding: 20px;
+    height: 500px;
+    margin: auto 40px;
+    /* border-radius: 20px; */
+
+    border:2px solid white;
+  }
+  
+  .left h5 {
+    cursor: pointer;
+    margin-bottom: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .left .profile:hover {
+    background-color: #20262e;
+  }
+  
+  .right {
+    margin-top: 20%;
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  @media (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+  
+    .right {
+      flex-grow: initial;
+    }
+    .left{
+      display: block;
+    }
+  }
+  .profile{
+    margin-top: 50px;
+    font-size: 20px;
+    /* background-image: linear-gradient(to bottom, #0f141e, black); */
+  }
+  
+  .myElement {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  @media (min-width: 800px) {
+    .myElement {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  
